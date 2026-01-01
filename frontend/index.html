@@ -593,7 +593,7 @@
             showLoader();
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/tailor', {
+                const response = await fetch('/api/tailor', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -615,7 +615,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                showError('שגיאה בחיבור לשרת. ודא שהשרת Flask רץ על http://127.0.0.1:5000');
+                showError('שגיאה בחיבור לשרת. אנא נסה שוב');
             } finally {
                 hideLoader();
             }
@@ -634,7 +634,7 @@
             showLoader();
 
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/analyze', {
+                const response = await fetch('/api/analyze', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -657,7 +657,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                showError('שגיאה בחיבור לשרת. ודא שהשרת Flask רץ על http://127.0.0.1:5000');
+                showError('שגיאה בחיבור לשרת. אנא נסה שוב');
             } finally {
                 hideLoader();
             }
